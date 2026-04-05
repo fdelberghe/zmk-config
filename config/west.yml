@@ -9,6 +9,11 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
+      revision: v0.3
       import: app/west.yml
+    - name: zmk-keyboard-totem
+      url: https://github.com/BildermanKawasaki/zmk-keyboard-totem.git
+      revision: main
+      path: modules/zmk-keyboard-totem
   self:
     path: config
