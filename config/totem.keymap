@@ -28,6 +28,10 @@
   tapping-term-ms = <170>;
 };
 
+&sk {
+  release-after-ms = <1200>;
+};
+
 / {
     combos {
             compatible = "zmk,combos";
