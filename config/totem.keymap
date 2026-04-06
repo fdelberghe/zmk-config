@@ -213,7 +213,7 @@ label= "NAVI"                              ;
                 &none       &none       &none       &none       &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &none
                 &tog NAV    &none       &kp LC(TAB) &kp LG(TAB) &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp BSPC
     &trans      &none       &kp LG(X)   &kp LG(C)   &kp LG(V)   &none           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &mo ADJ
-                                        &trans      &trans      &kp BSPC        &kp DEL     &trans      &trans
+                                        &trans      &kp BSPC    &kp DEL         &none       &none       &none
                         >;
                 };
 
