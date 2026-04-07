@@ -316,7 +316,7 @@ label= "NUM"                               ;
                 &kp FSLH    &kp N7      &kp N8      &kp N9      &kp STAR        &none       &none       &none       &none       &none
                 &kp BSPC    &kp N4      &kp N5      &kp N6      &kp MINUS       &none       &none       &none       &none       &none
     &none       &kp DEL     &kp N1      &kp N2      &kp N3      &kp PLUS        &none       &none       &none       &none       &none       &none
-                                        &kp DOT     &kp N0      &kp ENT         &none       &none       &tog NUM
+                                        &kp DOT     &kp N0      &kp RET         &none       &none       &tog NUM
                         >;
                 };
         };
