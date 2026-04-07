@@ -63,13 +63,23 @@
         };
 
         // Swapper for CMD+TAB (app switching)
-        swapper: swapper {
+        swap_app: swap_app {
           compatible = "zmk,behavior-tri-state";
           #binding-cells = <0>;
           bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-          ignored-key-positions = <13>;
+          ignored-key-positions = <12 13>;
           ignored-layers = <NAV>;
-          timeout-ms = <500>;
+          timeout-ms = <1000>;
+        };
+
+        // Swapper for CTRL+TAB (tab switching)
+        swap_tab: swap_tab {
+          compatible = "zmk,behavior-tri-state";
+          #binding-cells = <0>;
+          bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
+          ignored-key-positions = <12 13>;
+          ignored-layers = <NAV>;
+          timeout-ms = <1000>;
         };
 
   };
@@ -175,7 +185,7 @@ label= "SYM"                               ;
 
                 &kp EXCL    &kp AT      &kp LBRC    &kp RBRC    &kp PRCNT       &kp CARET   &kp LBKT    &kp RBKT    &kp DLLR    &kp DQT
                 &nk LCTRL LCTRL &nk LALT LALT &nk LGUI LGUI &nk LSHFT LSHFT &kp HASH        &kp STAR    &kp LPAR    &kp RPAR    &kp UNDER   &kp COLON
-    &trans      &kp GRAVE   &kp TILDE   &kp BSLH    &kp AMPS    &kp PLUS        &kp MINUS   &kp EQUAL   &kp LT      &kp GT      &kp SQT     &trans
+    &LC(Z)      &kp GRAVE   &kp TILDE   &kp BSLH    &kp AMPS    &kp PLUS        &kp MINUS   &kp EQUAL   &kp LT      &kp GT      &kp SQT     &trans
                                         &trans      &trans      &trans          &lt EXT K_CANCEL &kp LG(SPACE)      &trans
                         >;
                 };
@@ -226,7 +236,7 @@ label= "NAVI"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &none       &none       &none       &none       &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &none
-                &tog NAV    &none       &kp LC(TAB) &swapper    &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp BSPC
+                &tog NAV    &none       &swap_tab   &swap_app   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp BSPC
     &trans      &none       &kp LG(X)   &kp LG(C)   &kp LG(V)   &none           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &mo ADJ
                                         &trans      &kp BSPC    &kp DEL         &none       &none       &none
                         >;
