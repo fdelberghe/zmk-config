@@ -62,6 +62,16 @@
           bindings = <&kp>, <&sk>;
         };
 
+        // Swapper for CMD+TAB (app switching)
+        swapper: swapper {
+          compatible = "zmk,behavior-tri-state";
+          #binding-cells = <0>;
+          bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+          ignored-key-positions = <13>;
+          ignored-layers = <NAV>;
+          timeout-ms = <500>;
+        };
+
   };
 
     combos {
@@ -216,7 +226,7 @@ label= "NAVI"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &none       &none       &none       &none       &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &none
-                &tog NAV    &none       &kp LC(TAB) &kp LG(TAB) &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp BSPC
+                &tog NAV    &none       &kp LC(TAB) &swapper    &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp BSPC
     &trans      &none       &kp LG(X)   &kp LG(C)   &kp LG(V)   &none           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &mo ADJ
                                         &trans      &kp BSPC    &kp DEL         &none       &none       &none
                         >;
