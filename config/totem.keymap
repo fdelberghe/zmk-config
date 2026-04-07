@@ -90,7 +90,7 @@
                 timeout-ms = <50>;
                 key-positions = <12 13>;
                 bindings = <&kp TAB>;
-                layers = <BASE>;
+                layers = <BASE NUM>;
             };
             combo_enter {
                 timeout-ms = <50>;
@@ -115,6 +115,12 @@
                 key-positions = <22 23>;
                 bindings = <&kp PIPE>;
                 layers = <SYM>;
+            };
+            combo_num {
+                timeout-ms = <50>;
+                key-positions = <18 19>;
+                bindings = <&tog NUM>;
+                layers = <BASE NUM>;
             };
     };
 
@@ -155,7 +161,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &kp S       &kp D       &kp F       &kp G           &kp H       &kp J       &kp K       &kp L       &kp SEMI
     &lt NAV ESC &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RET
-                                        &none       &kp LSHFT   &lt SYM K_CANCEL &lt EXT K_CANCEL &kp SPACE   &none
+                                        &mo NAV     &kp LSHFT   &lt SYM K_CANCEL &lt EXT K_CANCEL &kp SPACE   &tog NUM
                         >;
                 };
 
@@ -285,6 +291,32 @@ label= "FUNC"                              ;
                 &kp C_BRI_DN &kp C_PREV &kp C_PP    &kp C_NEXT  &kp C_VOL_DN    &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp F11
     &trans      &kp F1      &kp F2      &kp F3      &kp F4      &kp F5          &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &trans
                                         &trans      &trans      &trans          &trans      &trans      &trans
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+
+                num_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "NUM"                               ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃     /     ┃     9     ┃     8     ┃     7     ┃     *     ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃    BSPC   ┃     6     ┃     5     ┃     4     ┃     -     ┃   ┃           ┃           ┃           ┃           ┃           ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃    DEL    ┃     3     ┃     2     ┃     1     ┃     +     ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃     .     ┃     0     ┃   ENT     ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &kp FSLH    &kp N7      &kp N8      &kp N9      &kp STAR        &none       &none       &none       &none       &none
+                &kp BSPC    &kp N4      &kp N5      &kp N6      &kp MINUS       &none       &none       &none       &none       &none
+    &none       &kp DEL     &kp N1      &kp N2      &kp N3      &kp PLUS        &none       &none       &none       &none       &none       &none
+                                        &kp DOT     &kp N0      &kp ENT         &none       &none       &tog NUM
                         >;
                 };
         };
