@@ -178,7 +178,7 @@ label= "SYM"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp EXCL    &kp AT      &kp LBRC    &kp RBRC    &kp PRCNT       &kp CARET   &kp LBKT    &kp RBKT    &kp DLLR    &kp DQT
-                &SK(LCTRL)  &SK(LALT)   &SK(LGUI)   &SK(LSHFT)  &kp HASH        &kp STAR    &kp LPAR    &kp RPAR    &kp UNDER   &kp COLON
+                SK(LCTRL)   SK(LALT)    SK(LGUI)    SK(LSHFT)  &kp HASH        &kp STAR    &kp LPAR    &kp RPAR    &kp UNDER   &kp COLON
     &kp LC(Z)   &kp GRAVE   &kp TILDE   &kp BSLH    &kp AMPS    &kp PLUS        &kp MINUS   &kp EQUAL   &kp LT      &kp GT      &kp SQT     &trans
                                         &trans      &trans      &trans          &lt EXT K_CANCEL &kp LG(SPACE)      &trans
                         >;
@@ -204,7 +204,7 @@ label= "EXT"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &none       &none       &none       &none       &none           &kp BSPC    &SK(RSHFT)  &SK(RGUI)   &SK(RALT)   &SK(RCTRL)
+                &none       &none       &none       &none       &none           &kp BSPC    SK(RSHFT)   SK(RGUI)    SK(RALT)    SK(RCTRL)
     &trans      &none       &none       &kp PIPE    &none       &none           &none       &none       &none       &caps_word  &none       &kp BSPC
                                         &trans      &trans      &lt SYM K_CANCEL &trans      &trans      &trans
                         >;
