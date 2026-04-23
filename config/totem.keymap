@@ -160,7 +160,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &kp S       &kp D       &kp F       &kp G           &kp H       &kp J       &kp K       &kp L       &kp SEMI
     &lt NAV ESC &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RET
-                                        &mo NAV     &kp LSHFT   &mo SYM         &lt EXT K_CANCEL &kp SPACE   &mo NUM
+                                        &kp BSPC    &kp LSHFT   &mo SYM         &lt EXT K_CANCEL &kp SPACE   &mo NUM
                         >;
                 };
 
@@ -184,7 +184,7 @@ label= "SYM"                               ;
 
                 &kp EXCL    &kp AT      &kp LBRC    &kp RBRC    &kp PRCNT       &kp CARET   &kp LBKT    &kp RBKT    &kp DLLR    &kp DQT
                 SK(LCTRL)   SK(LALT)    SK(LGUI)    SK(LSHFT)   &kp HASH        &kp STAR    &kp LPAR    &kp RPAR    &kp UNDER   &kp COLON
-    &kp LC(Z)   &kp GRAVE   &kp TILDE   &kp BSLH    &kp AMPS    &kp PLUS        &kp MINUS   &kp EQUAL   &kp LT      &kp GT      &kp SQT     &trans
+    &kp LG(Z)   &kp GRAVE   &kp TILDE   &kp BSLH    &kp AMPS    &kp PLUS        &kp MINUS   &kp EQUAL   &kp LT      &kp GT      &kp SQT     &trans
                                         &trans      &trans      &trans          &mo EXT     &kp LG(SPACE) &none
                         >;
                 };
@@ -201,7 +201,7 @@ label= "EXT"                               ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃           ┃           ┃           ┃           ┃           ┃   ┃   BSPC    ┃  OS_SFT   ┃  OS_CMD   ┃  OS_ALT   ┃  OS_CTL   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃     |     ┃           ┃           ┃   ┃   VOL DO  ┃  VOL UP   ┃   PREV    ┃   NEXT    ┃           ┃           ┃
+// ┃           ┃           ┃           ┃     |     ┃           ┃           ┃   ┃   VOL DO  ┃  VOL UP   ┃   PREV    ┃   NEXT    ┃ CAP_WORD  ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃    SYM    ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -275,9 +275,9 @@ label= "ADJ"                               ;
 label= "FUNC"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃  BRI UP   ┃           ┃           ┃           ┃           ┃   ┃           ┃  DSK PV   ┃  DSK NX   ┃           ┃    F12    ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  DSK PV   ┃  DSK NX   ┃           ┃    F12    ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃  BRI DN   ┃           ┃           ┃           ┃           ┃   ┃   HOME    ┃  PG DOWN  ┃   PG UP   ┃    END    ┃    F11    ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   HOME    ┃  PG DOWN  ┃   PG UP   ┃    END    ┃    F11    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F4     ┃    F5     ┃   ┃    F6     ┃    F7     ┃    F8     ┃    F9     ┃    F10    ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -286,10 +286,10 @@ label= "FUNC"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none      &none       &none       &none           &none       &kp LC(LEFT) &kp LC(RIGHT) &none     &kp F12
-                &none       &none      &none       &none       &none           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp F11
-    &trans      &kp F1      &kp F2      &kp F3      &kp F4      &kp F5          &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &trans
-                                        &trans      &trans      &trans          &trans      &trans      &trans
+                &none       &none      &none       &none       &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &kp F12
+                &none       &none      &none       &none       &none           &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT   &kp F11
+    &trans      &kp F1      &kp F2      &kp F3     &kp F4      &kp F5          &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &trans
+                                        &none      &none       &trans          &trans      &none       &none
                         >;
                 };
 
