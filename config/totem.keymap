@@ -63,7 +63,7 @@
           bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
           ignored-key-positions = <12 13>;
           ignored-layers = <NAV>;
-          timeout-ms = <1000>;
+          timeout-ms = <2000>;
         };
 
         // Swapper for CTRL+TAB (tab switching)
@@ -73,7 +73,7 @@
           bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
           ignored-key-positions = <12 13>;
           ignored-layers = <NAV>;
-          timeout-ms = <1000>;
+          timeout-ms = <2000>;
         };
   };
 
