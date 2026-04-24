@@ -5,9 +5,9 @@
 #define SYM  1
 #define EXT  2
 #define NAV  3
-#define ADJ  4
-#define FUNC 5
-#define NUM  6
+#define FUNC 4
+#define NUM  5
+#define ADJ  6
 
 
 #define SK(KEY) &nk KEY KEY

@@ -75,7 +75,6 @@
           ignored-layers = <NAV>;
           timeout-ms = <1000>;
         };
-
   };
 
     combos {
