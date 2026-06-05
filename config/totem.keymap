@@ -63,7 +63,7 @@
           bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
           ignored-key-positions = <12 13>;
           ignored-layers = <NAV>;
-          timeout-ms = <2000>;
+          timeout-ms = <6000>;
         };
 
         // Swapper for CTRL+TAB (tab switching)
@@ -73,7 +73,7 @@
           bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
           ignored-key-positions = <12 13>;
           ignored-layers = <NAV>;
-          timeout-ms = <2000>;
+          timeout-ms = <6000>;
         };
   };
 
@@ -103,12 +103,6 @@
                 bindings = <&kp BSPC>;
                 layers = <BASE NUM>;
             };
-            combo_bspc_alt {
-                timeout-ms = <50>;
-                key-positions = <27 28>;
-                bindings = <&kp BSPC>;
-                layers = <BASE>;
-            };
             combo_pipe {
                 timeout-ms = <50>;
                 key-positions = <22 23>;
@@ -117,7 +111,7 @@
             };
             combo_num {
                 timeout-ms = <50>;
-                key-positions = <10 11>;
+                key-positions = <21 22>;
                 bindings = <&tog NUM>;
                 layers = <BASE NUM>;
             };
