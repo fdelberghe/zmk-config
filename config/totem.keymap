@@ -56,12 +56,14 @@
           bindings = <&kp>, <&sk>;
         };
 
-        // Swapper for CMD+TAB (app switching)
+        // Swapper for CMD+TAB (app switching). Holds GUI while tapping TAB;
+        // the reverse key (SHIFT+TAB) is ignored here so it can tap in the
+        // other direction without releasing GUI.
         swap_app: swap_app {
           compatible = "zmk,behavior-tri-state";
           #binding-cells = <0>;
           bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-          ignored-key-positions = <12 13>;
+          ignored-key-positions = <2 12 13>;
           ignored-layers = <NAV>;
           timeout-ms = <6000>;
         };
@@ -168,9 +170,9 @@ label= "SYM"                               ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃  OS_CTL   ┃  OS_ALT   ┃  OS_CMD   ┃  OS_SFT   ┃     #     ┃   ┃     *     ┃     (     ┃     )     ┃     _     ┃     :     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃     `     ┃     ~     ┃     \     ┃     &     ┃     +     ┃   ┃     -     ┃     =     ┃     <     ┃     >     ┃     '     ┃           ┃
+// ┃   CMD Z   ┃     `     ┃     ~     ┃     \     ┃     &     ┃     +     ┃   ┃     -     ┃     =     ┃     <     ┃     >     ┃     '     ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃   BSPC    ┃   DEL     ┃    SYM    ┃   ┃    EXT    ┃           ┃           ┃
+//                                     ┃    |      ┃           ┃    SYM    ┃   ┃    EXT    ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -178,7 +180,7 @@ label= "SYM"                               ;
                 &kp EXCL    &kp AT      &kp LBRC    &kp RBRC    &kp PRCNT       &kp CARET   &kp LBKT    &kp RBKT    &kp DLLR    &kp DQT
                 SK(LCTRL)   SK(LALT)    SK(LGUI)    SK(LSHFT)   &kp HASH        &kp STAR    &kp LPAR    &kp RPAR    &kp UNDER   &kp COLON
     &kp LG(Z)   &kp GRAVE   &kp TILDE   &kp BSLH    &kp AMPS    &kp PLUS        &kp MINUS   &kp EQUAL   &kp LT      &kp GT      &kp SQT     &trans
-                                        &trans      &kp DEL     &trans          &mo EXT     &kp LG(SPACE) &none
+                                        &kp PIPE    &trans      &trans          &mo EXT     &kp LG(SPACE) &none
                         >;
                 };
 
@@ -196,7 +198,7 @@ label= "EXT"                               ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃ BRI DW    ┃ BRI UP    ┃     |     ┃   REP     ┃           ┃   ┃   VOL DO  ┃  VOL UP   ┃   PREV    ┃   NEXT    ┃ CAP_WORD  ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃    SYM    ┃   ┃    EXT    ┃           ┃           ┃
+//                                     ┃     .     ┃           ┃    SYM    ┃   ┃    EXT    ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -204,7 +206,7 @@ label= "EXT"                               ;
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
                 &none       &none       &none       &none       &none           &kp BSPC    SK(RSHFT)   SK(RGUI)    SK(RALT)    SK(RCTRL)
     &trans      &kp C_BRI_DN &kp C_BRI_UP &kp PIPE  &key_repeat &none           &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp C_NEXT &caps_word  &kp BSPC
-                                        &trans      &trans      &mo SYM         &trans      &trans      &trans
+                                        &kp DOT     &trans      &mo SYM         &trans      &trans      &trans
                         >;
                 };
 
@@ -216,9 +218,9 @@ label= "EXT"                               ;
 label= "NAV"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   HOME    ┃  DSK PV   ┃  DSK NX   ┃    END    ┃           ┃
+//             ┃           ┃           ┃  SW APP-  ┃  SW APP+  ┃           ┃   ┃   HOME    ┃  DSK PV   ┃  DSK NX   ┃    END    ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃  TG NAV   ┃           ┃  CTL TAB  ┃  CMD TAB  ┃           ┃   ┃   LEFT    ┃   DOWN    ┃    UP     ┃   RIGHT   ┃   BSPC    ┃
+//             ┃  OS_CTL   ┃  OS_ALT   ┃  OS_CMD   ┃  OS_SFT   ┃           ┃   ┃   LEFT    ┃   DOWN    ┃    UP     ┃   RIGHT   ┃   BSPC    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃    CUT    ┃   COPY    ┃   PASTE   ┃           ┃   ┃   HOME    ┃  PG DOWN  ┃   PG UP   ┃    END    ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -227,8 +229,8 @@ label= "NAV"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none       &none       &none       &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &none
-                &tog NAV    &none       &swap_tab   &swap_app   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp BSPC
+                &none       &none       &kp LS(TAB) &swap_app   &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &none
+                SK(LCTRL)   SK(LALT)    SK(LGUI)    SK(LSHFT)   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp BSPC
     &trans      &none       &kp LG(X)   &kp LG(C)   &kp LG(V)   &none           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &mo ADJ
                                         &kp BSPC    &kp DEL     &none           &none       &none       &none
                         >;
@@ -242,9 +244,9 @@ label= "NAV"                              ;
 label= "FUNC"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   HOME    ┃  DSK PV   ┃  DSK NX   ┃   END     ┃    F12    ┃
+//             ┃           ┃           ┃  PG DOWN  ┃   PG UP   ┃           ┃   ┃   HOME    ┃  DSK PV   ┃  DSK NX   ┃   END     ┃    F12    ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   LEFT    ┃    DOWN   ┃    UP     ┃   RIGHT   ┃    F11    ┃
+//             ┃           ┃           ┃  CTL TAB  ┃  CMD TAB  ┃           ┃   ┃   LEFT    ┃    DOWN   ┃    UP     ┃   RIGHT   ┃    F11    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F4     ┃    F5     ┃   ┃    F6     ┃    F7     ┃    F8     ┃    F9     ┃    F10    ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -253,8 +255,8 @@ label= "FUNC"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none      &none       &none       &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &kp F12
-                &none       &none      &swap_tab   &swap_app   &none           &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT   &kp F11
+                &none       &none      &kp LS(TAB) &swap_app   &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &kp F12
+                &none       &none      &trans      &trans      &none           &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT   &kp F11
     &trans      &kp F1      &kp F2     &kp F3      &kp F4      &kp F5          &kp F6      &kp F7       &kp F8      &kp F9      &kp F10     &trans
                                         &none      &none       &trans          &trans      &none       &none
                         >;
