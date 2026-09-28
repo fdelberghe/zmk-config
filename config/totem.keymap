@@ -129,6 +129,12 @@
                 bindings = <&kp C_PREV>;
                 layers = <EXT>;
             };
+            combo_tmux {
+                timeout-ms = <50>;
+                key-positions = <24 25>;
+                bindings = <&kp LC(B)>;
+                layers = <BASE>;
+            };
     };
 
 
@@ -222,7 +228,7 @@ label= "NAV"                              ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃  OS_CTL   ┃  OS_ALT   ┃  OS_CMD   ┃  OS_SFT   ┃           ┃   ┃   LEFT    ┃   DOWN    ┃    UP     ┃   RIGHT   ┃   BSPC    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃    CUT    ┃   COPY    ┃   PASTE   ┃           ┃   ┃   HOME    ┃  PG DOWN  ┃   PG UP   ┃    END    ┃           ┃           ┃
+// ┃           ┃           ┃    CUT    ┃   COPY    ┃   PASTE   ┃   CTL B   ┃   ┃   HOME    ┃  PG DOWN  ┃   PG UP   ┃    END    ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃   BSPC    |   DEL     ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -231,7 +237,7 @@ label= "NAV"                              ;
 
                 &none       &none       &kp LS(TAB) &swap_app   &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &none
                 SK(LCTRL)   SK(LALT)    SK(LGUI)    SK(LSHFT)   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp BSPC
-    &trans      &none       &kp LG(X)   &kp LG(C)   &kp LG(V)   &none           &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &mo ADJ
+    &trans      &none       &kp LG(X)   &kp LG(C)   &kp LG(V)   &kp LC(B)       &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &mo ADJ
                                         &kp BSPC    &kp DEL     &none           &none       &none       &none
                         >;
                 };
