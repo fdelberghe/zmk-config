@@ -211,7 +211,7 @@ label= "EXT"                               ;
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
                 &none       &none       &none       &none       &none           &kp BSPC    SK(RSHFT)   SK(RGUI)    SK(RALT)    SK(RCTRL)
-    &trans      &kp C_BRI_DN &kp C_BRI_UP &kp PIPE  &key_repeat &none           &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp C_NEXT &caps_word  &kp BSPC
+    &trans      &kp C_BRI_DN &kp C_BRI_UP &kp PIPE  &none       &key_repeat     &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp C_NEXT &caps_word  &kp BSPC
                                         &kp DOT     &trans      &mo SYM         &trans      &trans      &trans
                         >;
                 };
@@ -224,21 +224,21 @@ label= "EXT"                               ;
 label= "NAV"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃  SW APP-  ┃  SW APP+  ┃           ┃   ┃   HOME    ┃  DSK PV   ┃  DSK NX   ┃    END    ┃           ┃
+//             ┃           ┃           ┃  SW APP-  ┃  SW APP+  ┃  SW TAB   ┃   ┃   HOME    ┃  DSK PV   ┃  DSK NX   ┃    END    ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃  OS_CTL   ┃  OS_ALT   ┃  OS_CMD   ┃  OS_SFT   ┃           ┃   ┃   LEFT    ┃   DOWN    ┃    UP     ┃   RIGHT   ┃   BSPC    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃    CUT    ┃   COPY    ┃   PASTE   ┃   CTL B   ┃   ┃   HOME    ┃  PG DOWN  ┃   PG UP   ┃    END    ┃           ┃           ┃
+// ┃           ┃           ┃    CUT    ┃   COPY    ┃   PASTE   ┃   CTL B   ┃   ┃   REP     ┃  PG DOWN  ┃   PG UP   ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃   BSPC    |   DEL     ┃           ┃   ┃           ┃           ┃           ┃
+//                                     ┃   BSPC    |   DEL     ┃   ENTER   ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none       &kp LS(TAB) &swap_app   &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &none
+                &none       &none       &kp LS(TAB) &swap_app   &swap_tab       &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &none
                 SK(LCTRL)   SK(LALT)    SK(LGUI)    SK(LSHFT)   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp BSPC
-    &trans      &none       &kp LG(X)   &kp LG(C)   &kp LG(V)   &kp LC(B)       &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &mo ADJ
-                                        &kp BSPC    &kp DEL     &none           &none       &none       &none
+    &trans      &none       &kp LG(X)   &kp LG(C)   &kp LG(V)   &kp LC(B)       &key_repeat &kp PG_DN   &kp PG_UP   &trans      &none       &mo ADJ
+                                        &kp BSPC    &kp DEL     &kp RET         &none       &none       &none
                         >;
                 };
 
@@ -250,9 +250,9 @@ label= "NAV"                              ;
 label= "FUNC"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃  PG DOWN  ┃   PG UP   ┃           ┃   ┃   HOME    ┃  DSK PV   ┃  DSK NX   ┃   END     ┃    F12    ┃
+//             ┃           ┃           ┃  SW APP-  ┃  SW APP+  ┃  SW TAB   ┃   ┃   HOME    ┃  DSK PV   ┃  DSK NX   ┃   END     ┃    F12    ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃  CTL TAB  ┃  CMD TAB  ┃           ┃   ┃   LEFT    ┃    DOWN   ┃    UP     ┃   RIGHT   ┃    F11    ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   LEFT    ┃    DOWN   ┃    UP     ┃   RIGHT   ┃    F11    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F4     ┃    F5     ┃   ┃    F6     ┃    F7     ┃    F8     ┃    F9     ┃    F10    ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -261,7 +261,7 @@ label= "FUNC"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none      &kp LS(TAB) &swap_app   &none           &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &kp F12
+                &none       &none      &kp LS(TAB) &swap_app   &swap_tab       &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &kp F12
                 &none       &none      &trans      &trans      &none           &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT   &kp F11
     &trans      &kp F1      &kp F2     &kp F3      &kp F4      &kp F5          &kp F6      &kp F7       &kp F8      &kp F9      &kp F10     &trans
                                         &none      &none       &trans          &trans      &none       &none
