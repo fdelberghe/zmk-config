@@ -250,9 +250,9 @@ label= "NAV"                              ;
 label= "FUNC"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃  SW APP-  ┃  SW APP+  ┃  SW TAB   ┃   ┃   HOME    ┃  DSK PV   ┃  DSK NX   ┃   END     ┃    F12    ┃
+//             ┃  PG DOWN  ┃  PG UP    ┃  SW APP-  ┃  SW APP+  ┃  SW TAB   ┃   ┃   HOME    ┃  DSK PV   ┃  DSK NX   ┃   END     ┃    F12    ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   LEFT    ┃    DOWN   ┃    UP     ┃   RIGHT   ┃    F11    ┃
+//             ┃  OS_CTL   ┃  OS_ALT   ┃  OS_CMD   ┃  OS_SFT   ┃  CTL B    ┃   ┃   LEFT    ┃    DOWN   ┃    UP     ┃   RIGHT   ┃    F11    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F4     ┃    F5     ┃   ┃    F6     ┃    F7     ┃    F8     ┃    F9     ┃    F10    ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -261,8 +261,8 @@ label= "FUNC"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none      &kp LS(TAB) &swap_app   &swap_tab       &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &kp F12
-                &none       &none      &trans      &trans      &none           &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT   &kp F11
+                &kp PG_DOWN &kp PG_UP  &kp LS(TAB) &swap_app   &swap_tab       &kp HOME    &kp LC(LEFT) &kp LC(RIGHT) &kp END   &kp F12
+                SK(LCTRL)   SK(LALT)   SK(LGUI)    SK(LSHFT)   &kp LC(B)       &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT   &kp F11
     &trans      &kp F1      &kp F2     &kp F3      &kp F4      &kp F5          &kp F6      &kp F7       &kp F8      &kp F9      &kp F10     &trans
                                         &none      &none       &trans          &trans      &none       &none
                         >;
