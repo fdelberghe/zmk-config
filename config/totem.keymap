@@ -192,7 +192,7 @@ label= "SYM"                               ;
                 &kp EXCL    &kp AT      &kp LBRC    &kp RBRC    &kp PRCNT       &kp CARET   &kp LBKT    &kp RBKT    &kp DLLR    &kp DQT
                 SK(LCTRL)   SK(LALT)    SK(LGUI)    SK(LSHFT)   &kp HASH        &kp STAR    &kp LPAR    &kp RPAR    &kp UNDER   &kp COLON
     &kp LG(Z)   &kp GRAVE   &kp TILDE   &kp BSLH    &kp AMPS    &kp PLUS        &kp MINUS   &kp EQUAL   &kp LT      &kp GT      &kp SQT     &trans
-                                        &tog NUM    &kp LG(Z)   &trans          &mo EXT     &kp LG(SPACE) &none
+                                        &none       &kp LG(Z)   &trans          &mo EXT     &kp LG(SPACE) &none
                         >;
                 };
 
@@ -206,19 +206,19 @@ label= "EXT"                               ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     1     ┃     2     ┃     3     ┃     4     ┃     5     ┃   ┃     6     ┃     7     ┃     8     ┃     9     ┃     0     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃    REP    ┃   ┃   BSPC    ┃  OS_SFT   ┃  OS_CMD   ┃  OS_ALT   ┃  OS_CTL   ┃
+//             ┃  OS_CTL   ┃  OS_ALT   ┃  OS_CMD   ┃  OS_SFT   ┃    REP    ┃   ┃   BSPC    ┃           ┃           ┃           ┃  OS_CTL   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃ BRI DW    ┃ BRI UP    ┃     |     ┃           ┃    REP    ┃   ┃   VOL DO  ┃  VOL UP   ┃   PREV    ┃   NEXT    ┃ CAP_WORD  ┃           ┃
+// ┃           ┃ BRI DW    ┃ BRI UP    ┃     |     ┃           ┃    REP    ┃   ┃   VOL DO  ┃  VOL UP   ┃   PREV    ┃   NEXT    ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃     .     ┃           ┃    SYM    ┃   ┃    EXT    ┃           ┃           ┃
+//                                     ┃     .     ┃           ┃    SYM    ┃   ┃    EXT    ┃ CAP_WORD  ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &none       &none       &none       &none       &key_repeat     &kp BSPC    SK(RSHFT)   SK(RGUI)    SK(RALT)    SK(RCTRL)
-    &trans      &kp C_BRI_DN &kp C_BRI_UP &kp PIPE  &none       &key_repeat     &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp C_NEXT &caps_word  &kp BSPC
-                                        &kp DOT     &trans      &mo SYM         &trans      &trans      &trans
+                SK(LCTRL)   SK(LALT)    SK(LGUI)    SK(LSHFT)   &key_repeat     &kp BSPC    &none       &none       &none       &none
+    &trans      &kp C_BRI_DN &kp C_BRI_UP &kp PIPE  &none       &none           &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp C_NEXT &none  &kp BSPC
+                                        &kp DOT     &none       &mo SYM         &trans      &caps_word      &none
                         >;
                 };
 
