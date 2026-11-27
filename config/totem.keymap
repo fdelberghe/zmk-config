@@ -85,7 +85,7 @@
                 timeout-ms = <50>;
                 key-positions = <11 12>;
                 bindings = <&kp ESC>;
-                layers = <BASE>;
+                layers = <BASE NUM>;
             };
             combo_tab {
                 timeout-ms = <50>;
@@ -167,7 +167,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &kp S       &kp D       &kp F       &kp G           &kp H       &kp J       &kp K       &kp L       &kp SEMI
     &lt NAV ESC &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RET
-                                        &kp BSPC    &kp LSHFT   &mo SYM         &lt EXT K_CANCEL &kp SPACE   &mo NUM
+                                        &tog NUM    &kp LSHFT   &mo SYM         &lt EXT K_CANCEL &kp SPACE   &none
                         >;
                 };
 
@@ -216,7 +216,7 @@ label= "EXT"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                SK(LCTRL)   SK(LALT)    SK(LGUI)    SK(LSHFT)   &key_repeat     &kp BSPC    &none       &none       &none       &trans
+                SK(LCTRL)   SK(LALT)    SK(LGUI)    SK(LSHFT)   &key_repeat     &kp BSPC    &none       &none       &none       &kp COLON
     &trans      &kp C_BRI_DN &kp C_BRI_UP &kp PIPE  &none       &none           &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &kp C_NEXT &none  &kp BSPC
                                         &kp DOT     &none       &mo SYM         &trans      &caps_word      &none
                         >;
@@ -288,15 +288,15 @@ label= "NUM"                               ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃    DEL    ┃     3     ┃     2     ┃     1     ┃     +     ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃     .     ┃     0     ┃   ENT     ┃   ┃           ┃           ┃           ┃
+//                                     ┃    TOG    ┃     .     ┃     0     ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp FSLH    &kp N7      &kp N8      &kp N9      &kp STAR        &none       &none       &none       &none       &none
-                &kp BSPC    &kp N4      &kp N5      &kp N6      &kp MINUS       &none       &none       &none       &none       &none
-    &none       &kp DEL     &kp N1      &kp N2      &kp N3      &kp PLUS        &none       &none       &none       &none       &none       &none
-                                        &kp DOT     &kp N0      &kp RET         &none       &none       &tog NUM
+                &kp COLON   &kp N4      &kp N5      &kp N6      &kp MINUS       &none       &none       &none       &none       &none
+    &none       &kp BSPC    &kp N1      &kp N2      &kp N3      &kp PLUS        &none       &none       &none       &none       &none       &none
+                                        &tog NUM    &kp DOT     &kp N0          &none       &kp SPACE   &tog NUM
                         >;
                 };
 
@@ -322,7 +322,7 @@ label= "ADJ"                               ;
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none          &none      &kp F7      &kp F8      &kp F9      &kp F12
                 &sys_reset &bt BT_CLR  &out OUT_TOG &none    &none          &none      &kp F4      &kp F5      &kp F6      &kp F11
     &none       &none      &bt BT_PRV  &none      &none      &none          &none      &kp F1      &kp F2      &kp F3      &kp F10     &none
-                                       &none      &none      &none          &none      &none      &none
+                                       &none      &none      &none          &none      &none       &none
                         >;
                 };
         };
